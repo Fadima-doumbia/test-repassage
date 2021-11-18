@@ -44,10 +44,9 @@ public class UserController {
         userService.deleteUser(id);
     }
 
-    @PutMapping
-    public User updateUser(@RequestBody User u){
-        Optional<User> user = userService.getUser(u.getId());
-        return userService.saveUser(u);
+    @PutMapping("/modif")
+    public User updateUser(@RequestBody UserDto u){
+        return userService.updateUser(u);
     }
 
     @PostMapping()

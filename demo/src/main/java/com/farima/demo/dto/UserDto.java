@@ -7,12 +7,7 @@ import lombok.Data;
 public class UserDto {
 
     private Long id;
-    private String firstName;
-    private String lastName;
-    private int telephone;
+    private String username;
     private String email;
-    private String presentation;
-    private String pays;
-    private String image;
     private String password;
 }
