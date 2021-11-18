@@ -3,7 +3,9 @@ package com.farima.demo.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -16,6 +18,12 @@ public class Project {
     private String description;
     private String entrepreneur;
     private String besoin;
-//    private Date dateD;
-    //private enum secteurAct;
+/*    @OneToMany
+    private List<Project> projects;*/
+
+//    @ManyToOne
+//    private User userId;
+    @ManyToOne
+    private User userId;
+
 }

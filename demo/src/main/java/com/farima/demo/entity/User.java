@@ -5,6 +5,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -23,4 +27,15 @@ public class User {
     private String username;
     private String email;
     private String password;
+/*    @ManyToOne
+    private Long userId ;
+    private User userId ;
+    @OneToMany
+    List<Project> projects = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userId")
+    private List<Project> projects;*/
+    
+@OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
+private Set<Project> projects = new HashSet<>();
+
 }

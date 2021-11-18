@@ -10,5 +10,5 @@ public class ProjectDto {
     private String description;
     private String entrepreneur;
     private String besoin;
-
+    private Long userId;
 }
